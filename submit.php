@@ -26,7 +26,7 @@ if (isset($_FILES['profile_picture']) && $_FILES['profile_picture']['error'] == 
     }
 }
 
-// Insert data into the database
+// Insert data into the databasesubmitindex.php
 $sql = "INSERT INTO students (full_name, age, email, profile_picture) VALUES ('$full_name', $age, '$email', '$profile_picture')";
 
 if ($conn->query($sql) === TRUE) {

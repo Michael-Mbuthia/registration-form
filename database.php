@@ -6,14 +6,11 @@ $dbname = "collegedb";
 $conn ="";
 
 // Create connection
-try{
-$conn =  mysqli_connect($servername, $username, $password, $dbname);
-}
-catch(mysqli_sql_exception){
-    echo"Could not connect";
-}
+$conn = new mysqli($servername, $username, $password, $dbname);
+
 // Check connection
-if ($conn) {
-    echo"Connected";
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+?>
 ?>
